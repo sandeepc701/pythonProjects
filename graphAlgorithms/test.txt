@@ -1,0 +1,15 @@
+hi my name is sandeep
+<<<<<<< HEAD
+and iam 25 years old
+i have 2+ years of experience in bigdata projects
+iam currently working for infosys.
+working here sucks !!!
+please god, help me find a way out .....
+
+sometimes i feel like i will become a superman
+
+Sandeep Chauhan
+=======
+
+hi my name is shweta
+>>>>>>> fix
