@@ -1,3 +1,5 @@
+# This is a Script created which implements merge sort, min heap and max heap algorithms
+
 def merge(l1,l2):
     l3=[];
     INFINITY=99999999;
