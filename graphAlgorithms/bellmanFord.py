@@ -6,10 +6,10 @@ class Graphs :
             self.__MAT=[]
             self.__len1=-1
 
-        def __initialize(self,GRAPH):
+        def __initialize(self,GRAPH,Source):
             self.__MAT = GRAPH
             self.__len1 = len(GRAPH)
-            self.__dist = [(INFINITY if i > 0 else 0) for i in range(self.__len1)]
+            self.__dist = [(INFINITY if not i  == Source else 0) for i in range(self.__len1)]
             self.__parent = [None for i in range(self.__len1)]
 
 
@@ -44,7 +44,7 @@ class Graphs :
             return self.__path
 
         def printPath(self,GRAPH,Source,Destination,algo):
-            self.__initialize(GRAPH)
+            self.__initialize(GRAPH,Source)
             if Source>=self.__len1 or Destination >=self.__len1 :
                 print("Source or Destination mentioned does not exists , Terminating ...");
             else :
