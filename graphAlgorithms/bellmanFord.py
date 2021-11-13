@@ -40,13 +40,16 @@ class Graphs :
 
         def printPath(self,GRAPH,Source,Destination,algo):
             self.__initialize(GRAPH)
-            if algo=='b' :
-                if self.__bellmanFord() :
-                    print(self.__getPath(Source,Destination));
-                else :
-                    print("path cannot be found since graph given by you has negative weight cycle !!");
+            if Source>=self.__len1 or Destination >=self.__len1 :
+                print("Source or Destination mentioned does not exists , Terminating ...");
             else :
-                pass # under construction !!!!
+                if algo=='b' :
+                    if self.__bellmanFord() :
+                        print(self.__getPath(Source,Destination));
+                    else :
+                        print("path cannot be found since graph given by you has negative weight cycle !!");
+                else :
+                    pass # under construction !!!!
 
 
 MAT=[
@@ -63,4 +66,4 @@ gr=Graphs()
 
 gr.printPath(MAT,0,3,'b') # Graph with no negative weight cycle
 
-gr.printPath(MAT1,0,3,'b') # Graph with negative weight cycle
+gr.printPath(MAT1,0,2,'b') # Graph with negative weight cycle
