@@ -30,6 +30,11 @@ class Graphs :
 
             return str1==str(self.__dist)
 
+        def __dijkshtra(self):
+
+            # Under Construction
+            pass
+
         def __getPath(self,u,v):
             self.__path=str(v)
             temp=v
@@ -48,8 +53,9 @@ class Graphs :
                         print(self.__getPath(Source,Destination));
                     else :
                         print("path cannot be found since graph given by you has negative weight cycle !!");
-                else :
-                    pass # under construction !!!!
+                elif algo=='d' :
+                    self.__dijkshtra()
+                    print(self.__getPath(Source, Destination));
 
 
 MAT=[
@@ -59,11 +65,32 @@ MAT=[
 [2,INFINITY,INFINITY,0]
 ]
 
+MAT3=[
+[0,4,INFINITY,INFINITY,16,INFINITY,INFINITY,INFINITY,5,18],
+[4,0,7,9,INFINITY,INFINITY,INFINITY,INFINITY,10,INFINITY],
+[INFINITY,7,0,8,INFINITY,INFINITY,INFINITY,INFINITY,INFINITY,INFINITY],
+[INFINITY,9,8,0,10,INFINITY,INFINITY,14,INFINITY,INFINITY],
+[16,INFINITY,INFINITY,10,0,21,INFINITY,INFINITY,INFINITY,INFINITY],
+[INFINITY,INFINITY,INFINITY,INFINITY,21,0,24,INFINITY,INFINITY,INFINITY],
+[INFINITY,INFINITY,INFINITY,INFINITY,INFINITY,24,0,20,18,10],
+[INFINITY,INFINITY,INFINITY,14,INFINITY,INFINITY,20,0,11,16],
+[5,10,INFINITY,INFINITY,INFINITY,INFINITY,18,11,0,9],
+[18,INFINITY,INFINITY,INFINITY,INFINITY,INFINITY,10,16,9,0]
+]
+
 MAT1=\
 [[0,-9,INFINITY],[INFINITY,0,2],[3,INFINITY,0]]
 
 gr=Graphs()
 
-gr.printPath(MAT,0,3,'b') # Graph with no negative weight cycle
+#gr.printPath(MAT,0,3,'b') # Graph with no negative weight cycle
 
-gr.printPath(MAT1,0,2,'b') # Graph with negative weight cycle
+#gr.printPath(MAT1,0,2,'b') # Graph with negative weight cycle
+
+
+gr.printPath(MAT3,1,7,'b')
+
+#Its responsibility of user
+# to make sure that graph has no -ve weights
+# if he/she uses DIJKSHTRA's algorithm
+#gr.printPath(MAT1, 3, 2, 'd') #dijkshtra's Algorithm more efficient than bellmanford
