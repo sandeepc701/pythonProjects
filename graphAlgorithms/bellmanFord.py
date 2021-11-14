@@ -1,4 +1,4 @@
-print("Welcome, this is the code for bellman ford algorithm !!!")
+print("Welcome, there is a change this is the code for bellman ford algorithm !!!")
 
 INFINITY=9999999999999
 class Graphs :
@@ -58,13 +58,8 @@ class Graphs :
                     print(self.__getPath(Source, Destination));
 
 
-MAT=[
-[0,3,INFINITY,7],
-[8,0,2,INFINITY],
-[5,INFINITY,0,1],
-[2,INFINITY,INFINITY,0]
-]
-
+MAT=[[0,3,INFINITY,7],[8,0,2,INFINITY],[5,INFINITY,0,1],[2,INFINITY,INFINITY,0]]
+MAT1=[[0,-9,INFINITY],[INFINITY,0,2],[3,INFINITY,0]]
 MAT3=[
 [0,4,INFINITY,INFINITY,16,INFINITY,INFINITY,INFINITY,5,18],
 [4,0,7,9,INFINITY,INFINITY,INFINITY,INFINITY,10,INFINITY],
@@ -78,8 +73,7 @@ MAT3=[
 [18,INFINITY,INFINITY,INFINITY,INFINITY,INFINITY,10,16,9,0]
 ]
 
-MAT1=\
-[[0,-9,INFINITY],[INFINITY,0,2],[3,INFINITY,0]]
+
 
 gr=Graphs()
 

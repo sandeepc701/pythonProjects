@@ -20,6 +20,7 @@ dist=[
 [5,INFINITY,0,1],
 [2,INFINITY,INFINITY,0]
 ]
+sources = [[],[],[],[]]
 '''
 dist=[
 [0,3,INFINITY,5],
@@ -31,7 +32,7 @@ dist=[
 
 for i in range(len(dist)):
     for u in range(len(dist)) :
-        for v in range(len(dist[0])):
+        for v in range(len(dist)):
             if dist[u][v]> dist[u][i]+dist[i][v] :
                 dist[u][v]=dist[u][i]+dist[i][v];
     
