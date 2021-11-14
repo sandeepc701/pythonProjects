@@ -1,4 +1,4 @@
-print("Welcome, there is a change this is the code for bellman ford algorithm !!!")
+print("Welcome, this is the code for bellman ford algorithm !!!")
 
 INFINITY=9999999999999
 class Graphs :
